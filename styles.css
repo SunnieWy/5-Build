@@ -17,7 +17,6 @@ body {
     margin: 0;
     background-color: #0f172a;
     color: #e2e8f0;
-    min-width:500px;
     display:grid;
     grid-template-columns:1fr;
 }
@@ -75,6 +74,21 @@ img {
     border-left: 4px solid #38bdf8;
 }
 
+.card-row {
+    background-color: #1e293b;
+    padding: 1rem;
+    padding: 1rem;
+    border-left: 4px solid #38bdf8;
+}
+
+.card {
+    background-color: #1e293b;
+    margin-top: 1rem;
+    padding: 1rem;
+    padding: 1rem;
+    border-left: 4px solid #38bdf8;
+}
+
 aside {
     background-color: #38bdf8;
     color: #1e293b;
@@ -102,20 +116,37 @@ footer {
     margin-top: 1rem;
 }
 
+
 /* ===== Media Query (Medium) ===== */
 @media screen and (min-width: 800px){
-    nav ul{
+    body {
+        grid-template-columns:1fr 300px;
+    }
+    
+    nav ul {
         display: flex;
         justify-content: space-around;
     
-}
+    }
 
-    .card-row{
+    .card-row {
         display: flex;
         gap: 1rem;
+    }
+
+    .card-row section { 
+        width: 30%;
+        padding: 1rem;
+    }
+
+    .card-row img {
+        width: 320px;
+        height: 200px;
+    }
+
+    header, nav, footer {
+        grid-column: 1/ -1;
+    }
 }
-}
-/* change the body's grid template to 1fr 300px */
-/* target the header, nav, and footer and style their grid-column to 1/-1 */
-/* target the .card-row to display flex */
-/* target the sections in .card-row witha width for 30% */
+
+
